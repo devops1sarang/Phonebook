@@ -34,7 +34,7 @@ public class SaveContactController {
 	@PostMapping(value = "/saveContact")
 	public String saveOrUpdateContact(@ModelAttribute("contactDto") ContactDto contactDto,
 			RedirectAttributes attributes) {
-		logger.info("the method is called ....");
+		logger.info("the method is called ...."); 
 		boolean isSaved = contactService.saveOrUpdateContact(contactDto);
 		if (isSaved)
 			attributes.addFlashAttribute("success", "Contact saved successfully");
