@@ -44,7 +44,7 @@ public class SaveContactController {
 	}
 
 	@GetMapping(value = "/showAllContacts")
-	public String showAllCcntacts(Model model) {
+	public String showAllCcntacts(Model model) { 
 		List<ContactDto> contactList = contactService.getAllContacts();
 		model.addAttribute("contactList", contactList);
 		return "contactList";
